@@ -1,0 +1,21 @@
+---
+- hosts: machine
+  gather_facts: false
+  tasks:
+    - debug:
+        var: all
+    - debug:
+        var: group
+    - debug:
+        var: group.name
+    - debug:
+        var: user
+    - debug:
+        var: user.mail
+    - debug:
+        var: ansible_host
+    - debug:
+        var: ansible_user
+    - debug:
+        var: inventory_hostname
+

@@ -1,0 +1,29 @@
+---
+all:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    group:
+      name: tkyama
+      gid: 1024
+      avail: o
+    user:
+      name: tkyama
+      uid: 1024
+      main_group: tkyama
+      sub_groups: adm
+      shell: /bin/bash
+      mail: yama.tk333@gmail.com
+      avail: o
+    control: adm21
+    control_ipv4: 192.168.0.254
+    control_user: ubuntu
+# for control
+    ansible_user: ubuntu
+
+machine:
+  hosts:
+    adm21:
+      ansible_host: 192.168.0.254
+      ansible_user: ubuntu
+
+
